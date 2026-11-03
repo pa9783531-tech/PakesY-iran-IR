@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+private_data/
+media/
+tools/
+setup_log.txt
+*.log
+.DS_Store
+
+# Hosting secrets and local state
+.env
+.env.local
+*.sqlite3
+*.db

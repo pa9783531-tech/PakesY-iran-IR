@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0d16" />
+  <title>PakesY — BedWars Creator Universe</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2218%22%20fill%3D%22%23c9ff42%22%2F%3E%3Cpath%20d%3D%22M21%2014h19q12%200%2012%2012t-12%2012H31v13H21V14zm10%209v7h9q3%200%203-3t-3-4z%22%20fill%3D%22%230a0d14%22%2F%3E%3Cpath%20d%3D%22m50%205%203%206%206%203-6%203-3%206-3-6-6-3%206-3z%22%20fill%3D%22%238a68fd%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml" />
+  <style id="pakesy-bundled-style">
+:root{--bg:#0a0c13;--sidebar:#0d101a;--panel:#121623;--panel-light:#171b2b;--line:#292d3c;--white:#f5f7fc;--muted:#9295a9;--lime:#c9fc50;--purple:#936fff;--cyan:#70dce4;--radius:18px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'Segoe UI',Tahoma,Arial,sans-serif;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:wait}input,textarea,select{outline:none}a{color:inherit;text-decoration:none}.hidden{display:none!important}.ambient{position:fixed;z-index:-1;pointer-events:none;filter:blur(120px);opacity:.13;border-radius:999px}.ambient-a{width:450px;height:450px;background:#7440fa;left:25%;top:-200px}.ambient-b{width:370px;height:370px;background:#3caad4;right:15%;top:420px}.layout{display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh;direction:ltr}.sidebar{padding:32px 17px 20px;min-height:100vh;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:0;border-right:1px solid #242837;background:#0d101a;z-index:4}.brand{display:flex;align-items:center;gap:11px;padding:0 13px}.brand-symbol{width:40px;height:40px;border-radius:12px;background:var(--lime);color:#10150e;font-size:27px;font-weight:900;display:grid;place-items:center;position:relative}.brand-spark{position:absolute;font-size:14px;top:-7px;right:-7px;color:var(--purple);filter:drop-shadow(0 0 4px #a98aff)}.brand-word{font-size:26px;font-weight:900;letter-spacing:-1.8px}.brand-word span,.mobile-brand span{color:var(--lime)}.sidebar-sub{font-size:9px;letter-spacing:1.9px;color:#788097;font-weight:800;padding:12px 15px 34px}.online-light{display:inline-block;width:6px;height:6px;background:var(--lime);border-radius:50%;margin-left:5px;box-shadow:0 0 8px var(--lime)}.side-title{font-size:10px;font-weight:800;letter-spacing:2px;color:#697083;padding:0 17px;margin-bottom:13px}.side-nav{display:flex;flex-direction:column;gap:7px}.nav-link{display:flex;align-items:center;gap:13px;width:100%;padding:12px 14px;border:1px solid transparent;color:#a2a6bb;background:transparent;border-radius:12px;text-align:left;font-size:13px;font-weight:700}.nav-link:hover,.nav-link.active{background:#212638;color:var(--white)}.nav-link.active{border-color:#30384d;box-shadow:inset 3px 0 0 var(--lime)}.nav-icon{font-size:23px;line-height:22px;width:25px;color:#a7a0c7;text-align:center}.nav-link.active .nav-icon{color:var(--lime)}.community-title{margin-top:37px}.side-community{border-radius:13px;display:flex;align-items:center;gap:15px;padding:8px 12px}.community-avatar-stack{display:flex;padding-left:7px}.community-avatar-stack span{height:27px;width:27px;display:grid;place-items:center;border-radius:50%;margin-left:-7px;border:2px solid #0d101a;font-size:10px;font-weight:800;color:#182237;background:#b39dff}.community-avatar-stack span:nth-child(2){background:#ffba99}.community-avatar-stack span:nth-child(3){background:#8edbc8}.community-avatar-stack span:nth-child(4){background:#29354d;color:#d4d7e5}.side-community strong{display:block;font-size:16px}.side-community small{font-size:10px;color:var(--muted)}.side-spacer{flex:1}.creator-card{background:linear-gradient(144deg,#293c32 0%,#24312d 48%,#1a2024 100%);border:1px solid #526044;border-radius:16px;padding:19px;overflow:hidden;position:relative}.creator-card-glow{position:absolute;width:140px;height:140px;border-radius:50%;background:#d4ff59;filter:blur(90px);opacity:.17;right:-40px;top:-45px}.crown{color:var(--lime);font-size:25px}.creator-card-title{font-size:18px;font-weight:800;margin-top:8px}.creator-card p{font-size:11px;color:#b6c4b4;line-height:1.5;margin:6px 0 17px}.creator-card-action{border:0;background:var(--lime);font-weight:900;color:#161c10;font-size:12px;border-radius:10px;padding:11px 12px;width:100%;display:flex;justify-content:space-between}.sidebar-bottom{display:flex;align-items:center;gap:8px;border-top:1px solid #272c3c;padding:22px 8px 0;margin-top:20px;font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8894a2}.sidebar-bottom small{margin-left:auto;color:#566073;font-size:10px}.status-dot,.pulse-dot{width:7px;height:7px;background:var(--lime);border-radius:50%;display:inline-block;box-shadow:0 0 8px rgba(201,252,80,.6)}.main{min-width:0;direction:ltr}.topbar{height:88px;border-bottom:1px solid #242635;display:flex;align-items:center;justify-content:space-between;padding:0 39px;gap:18px}.search-wrap{display:flex;align-items:center;max-width:390px;width:100%;height:42px;background:#171b28;border:1px solid #2d3040;border-radius:11px;padding:0 13px;color:#828ba1}.search-wrap:focus-within{border-color:#777ca6}.search-icon{font-size:26px;margin-right:9px;line-height:1}.search-wrap input{color:#e5e9f1;background:transparent;border:0;min-width:0;flex:1;font-size:12px}.search-wrap input::placeholder{color:#6e7486}.search-wrap kbd{font-family:inherit;background:#262b3a;border:1px solid #353b50;border-radius:5px;font-size:10px;padding:4px 6px;white-space:nowrap}.top-actions{display:flex;gap:11px;align-items:center}.top-actions select{height:42px;border:1px solid #2a2f3f;border-radius:10px;color:#e0e4ef;background:#151a26;padding:0 9px;font-size:12px;max-width:132px}.top-add{height:42px;background:var(--lime);border:0;border-radius:10px;padding:0 17px;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:900;color:#16200d}.top-add span:first-child{font-size:21px;font-weight:400}.avatar{height:42px;width:42px;border:2px solid #46465b;border-radius:12px;color:#1e1734;font-weight:900;background:linear-gradient(140deg,#a7a6ff,#f4b8c9)}.mobile-brand,.mobile-nav{display:none}.main-inner{max-width:1500px;margin:auto;padding:27px 39px 35px}.hero{min-height:345px;display:flex;position:relative;overflow:hidden;border:1px solid #423a67;border-radius:23px;background:radial-gradient(ellipse at 73% 58%,#44408a 0%,transparent 49%),linear-gradient(110deg,#20203c 0%,#2c254e 43%,#1b213a 100%);box-shadow:0 14px 44px rgba(0,0,0,.16)}.hero-noise{position:absolute;inset:0;opacity:.22;background-image:radial-gradient(#9e95e7 0.7px, transparent 0.7px);background-size:24px 24px;mask-image:linear-gradient(90deg,transparent,black)}.hero-info{padding:42px 0 34px 43px;flex:1.13;z-index:1}.eyebrow{display:flex;gap:8px;align-items:center;font-size:10px;font-weight:900;letter-spacing:2.2px;color:#d6d0ff}.eyebrow-flare{color:var(--lime);font-size:14px}.hero h1{font-size:clamp(36px,4vw,60px);line-height:1.03;letter-spacing:-2px;font-weight:900;margin:20px 0 13px}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:13px;line-height:1.6;color:#c3bfdc;max-width:345px;margin:0 0 26px}.hero-buttons{display:flex;gap:12px}.primary-button{border:0;border-radius:11px;background:var(--lime);color:#141c0a;font-weight:900;padding:13px 19px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;font-size:12px;transition:transform .15s,filter .15s}.primary-button:hover,.top-add:hover{filter:brightness(1.08);transform:translateY(-1px)}.primary-button span:first-child{font-size:18px}.ghost-button{border:1px solid #7a719d;background:#ffffff0d;color:#e7e4fa;font-size:12px;font-weight:800;padding:12px 18px;border-radius:11px;display:flex;gap:15px;align-items:center}.ghost-button:hover{background:#ffffff1b}.hero-tag{font-size:9px;color:#bcb7d8;letter-spacing:1.6px;font-weight:800;margin-top:29px;display:flex;align-items:center;gap:8px}.hero-art{flex:.95;position:relative;min-width:260px}.hero-orbit{position:absolute;border:1px solid rgba(208,204,255,.16);border-radius:50%;width:400px;height:400px;top:-30px;left:-5px;transform:rotate(-10deg)}.orbit-2{width:290px;height:290px;top:35px;left:60px;border-color:rgba(208,204,255,.23)}.pixel-field{position:absolute;inset:0}.cube{position:absolute;transform:rotate(-30deg) skew(15deg,15deg);background:linear-gradient(135deg,#62cda4 0%,#448ec0 43%,#353f88 44%,#253171 100%);border:2px solid #a4f4e0;box-shadow:15px 20px 0 #293266,20px 25px 0 #182344,0 0 27px #7f74f2aa}.cube-1{width:96px;height:96px;top:114px;left:100px}.cube-2{width:63px;height:63px;top:60px;left:225px;background:linear-gradient(135deg,#a2a0ff,#7069de 43%,#4b478d 44%)}.cube-3{width:60px;height:60px;top:217px;left:268px;background:linear-gradient(135deg,#e6cb8f,#c7a16c 43%,#7a5c6d 44%)}.cube-4{width:40px;height:40px;top:25px;left:104px;background:linear-gradient(135deg,#9ed6ff,#61a8de 43%,#4174bb 44%)}.cube-5{width:34px;height:34px;top:195px;left:21px;background:linear-gradient(135deg,#e3adf0,#9c79d9 43%,#6555aa 44%)}.pixel-title{position:absolute;left:68px;top:151px;font-weight:1000;font-size:clamp(33px,4.3vw,70px);font-style:italic;letter-spacing:-2px;white-space:nowrap;text-shadow:5px 7px #191839,0 0 35px #9e8fff;transform:rotate(-9deg);-webkit-text-stroke:1px #d8d7ff}.pixel-title span{color:var(--lime);-webkit-text-stroke:1px #dafb81}.sword{position:absolute;top:12px;left:250px;font-size:54px;transform:rotate(25deg);text-shadow:0 0 20px #8ee4ff}.floating-pill{position:absolute;padding:9px 13px;border:1px solid #aaa1d9;background:#292b56c9;backdrop-filter:blur(9px);border-radius:8px;box-shadow:0 13px 20px #11122855;font-size:9px;font-weight:900;letter-spacing:1px}.pill-1{right:14px;top:99px;color:#d4f8fe;transform:rotate(9deg)}.pill-2{left:32px;bottom:35px;color:var(--lime);transform:rotate(-6deg)}.stats-strip{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.stat{background:#151924;border:1px solid #2a2e3a;border-radius:15px;min-height:93px;padding:20px;display:flex;align-items:center;gap:15px}.stat-icon{height:48px;width:48px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:24px;font-weight:700}.stat-icon.purple{background:#2d2548;color:#c8acff}.stat-icon.coral{background:#3c292f;color:#ff90ac}.stat-icon.blue{background:#203643;color:#7bd8e6}.stat-icon.lime{background:#2d3824;color:#d5ff7a}.stat-label{font-size:9px;letter-spacing:1.4px;color:#8c91a4;font-weight:800;white-space:nowrap}.stat strong{font-size:22px;letter-spacing:-.6px;margin-top:4px;display:block;white-space:nowrap}.feed-head{margin-top:43px;display:flex;align-items:end;justify-content:space-between;gap:16px}.section-eyebrow{color:var(--lime);font-size:10px;letter-spacing:2px;font-weight:900}.feed-head h2{font-size:30px;margin:8px 0 5px;letter-spacing:-.9px}.headline-dot{color:var(--lime)}.feed-head p{margin:0;font-size:12px;color:#868d9f}.section-actions{display:flex;gap:8px}.chip{background:#171b27;border:1px solid #2c3140;color:#9ea4b8;border-radius:10px;padding:11px 17px;font-size:12px;font-weight:800}.chip.active{background:#2b3527;border-color:#94b153;color:#d8ff8e}.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:26px;min-height:220px}.video-card{background:#151924;border:1px solid #272d3b;border-radius:16px;overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer;min-width:0}.video-card:hover{border-color:#7672a1;transform:translateY(-3px)}.thumb{height:185px;position:relative;background:linear-gradient(145deg,#3b2b68,#192238);overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}.video-card:hover .thumb img{transform:scale(1.06)}.thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 58%,#0b12266a)}.play-circle{z-index:1;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;display:grid;place-items:center;background:#0b0f21a6;backdrop-filter:blur(5px);border:1px solid #ffffff99;border-radius:50%;color:white;font-size:18px;opacity:0;transition:opacity .2s}.video-card:hover .play-circle{opacity:1}.thumb-duration{position:absolute;bottom:10px;right:10px;z-index:2;background:#05080de3;border-radius:5px;padding:4px 7px;font-size:10px;font-weight:700}.thumb-label{position:absolute;top:11px;left:12px;z-index:2;background:var(--lime);color:#1c2910;border-radius:6px;padding:5px 8px;font-size:9px;font-weight:900}.thumb-label.remix{background:#b7a7ff;color:#1d1a39}.video-card-body{padding:15px}.author-line{display:flex;gap:9px;align-items:center;color:#9ba1b6;font-size:11px}.author-avatar,.comment-avatar{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;color:#1d1b30;font-weight:900;font-size:13px;flex:none}.author-line .author-name{font-weight:800;color:#d5d9e8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.owner-check{color:var(--lime);font-size:12px}.video-card h3{font-size:15px;line-height:1.43;margin:11px 0 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.video-meta{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:11px;color:#858b9e}.video-meta .meta-stats{display:flex;gap:12px}.empty-state{grid-column:1/-1;border:1px dashed #434958;background:#141823;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:235px;padding:28px}.empty-state .empty-icon{font-size:39px;color:var(--lime)}.empty-state h3{margin:9px 0;font-size:19px}.empty-state p{max-width:390px;color:#8e96a9;font-size:12px;line-height:1.7;margin:0 0 18px}.footer{display:flex;justify-content:space-between;border-top:1px solid #292b38;padding:28px 0;margin-top:55px;font-size:11px;letter-spacing:1px;font-weight:800;color:#666f82}.footer-star{color:var(--lime)}.overlay{position:fixed;z-index:20;inset:0;background:#04060bdd;display:flex;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(9px)}.auth-card{width:min(430px,100%);border:1px solid #3c4254;border-radius:24px;background:radial-gradient(ellipse at top,#28304c,#141823 60%);padding:36px;box-shadow:0 25px 100px #0008}.auth-spark{color:var(--lime);font-size:32px;text-align:center}.auth-logo{font-size:40px;font-weight:900;letter-spacing:-2px;text-align:center}.auth-logo span{color:var(--lime)}.auth-small{text-align:center;font-size:9px;color:#a4b58d;letter-spacing:2px;margin:3px 0 29px}.auth-card h2{font-size:23px;margin:0 0 7px;text-align:center}.auth-card>p:not(.auth-small):not(.auth-bottom){font-size:12px;color:#9ba1b1;text-align:center;margin:0 0 25px}.auth-card form{display:flex;flex-direction:column}.auth-card label,.field label{font-size:11px;font-weight:800;color:#bdc4d3;margin-bottom:7px}.auth-card input,.field input,.field textarea,.comment-side input{width:100%;background:#0e1320;color:#eff4fa;border:1px solid #353c50;border-radius:11px;padding:13px 15px;font-size:13px;direction:auto}.auth-card input{margin-bottom:18px}.auth-card input:focus,.field input:focus,.field textarea:focus,.comment-side input:focus{border-color:#b5e759}.full{width:100%}.form-error{color:#ff9f99;font-size:12px;min-height:19px;text-align:center;margin-top:12px}.auth-bottom{display:flex;align-items:center;justify-content:center;gap:8px;color:#8f9b88;font-size:10px;margin:18px 0 0}.modal{width:min(620px,100%);max-height:calc(100vh - 36px);overflow-y:auto;background:#151925;border:1px solid #3c4152;border-radius:21px;padding:25px;box-shadow:0 28px 100px #000a}.modal-top{display:flex;align-items:start;justify-content:space-between;gap:10px;margin-bottom:21px}.modal-top h2{font-size:25px;margin:6px 0 0;line-height:1.2}.icon-close{width:34px;height:34px;border:1px solid #3d4253;border-radius:9px;background:#242939;color:#cbd0da;font-size:14px}.dropzone{min-height:155px;border:2px dashed #58556e;border-radius:14px;background:radial-gradient(circle at center,#282b46,#1a1e2b);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;text-align:center;padding:18px}.dropzone:hover,.dropzone.dragging{border-color:var(--lime)}.upload-illustration{display:grid;place-items:center;background:#d5fc68;color:#131c13;border-radius:13px;height:48px;width:48px;font-size:28px;font-weight:800;margin-bottom:12px}.dropzone strong{font-size:14px}.dropzone small{color:#939ab0;font-size:11px;margin-top:5px}.field{display:flex;flex-direction:column;margin:17px 0}.field textarea{resize:vertical}.toggle-area{display:flex;gap:13px;align-items:center;border:1px solid #45415a;background:#232238;border-radius:13px;padding:15px;margin:19px 0}.toggle-icon{font-size:27px;color:#c4a9ff}.toggle-copy{flex:1}.toggle-copy strong{display:block;font-size:14px}.toggle-copy small{display:block;color:#9b9bb7;line-height:1.55;margin-top:3px;font-size:11px}.switch input{opacity:0;width:0;height:0}.switch span{width:45px;height:25px;display:block;background:#4e5264;border-radius:30px;position:relative;transition:background .2s}.switch span:before{content:"";position:absolute;top:4px;left:4px;height:17px;width:17px;border-radius:50%;background:#fff;transition:transform .2s}.switch input:checked+span{background:var(--lime)}.switch input:checked+span:before{transform:translateX(20px);background:#1a2410}.upload-status{font-size:11px;color:#adb6c9;text-align:center;min-height:20px;margin-top:12px}.viewer-modal{width:min(1100px,100%)}.viewer-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.8fr);gap:22px;direction:ltr}.player-side video{width:100%;max-height:480px;background:#04050b;border-radius:12px;display:block}.player-meta{display:flex;justify-content:space-between;gap:12px;color:#b1b5c3;font-size:11px;margin-top:14px}.player-side p{color:#8e94a5;font-size:12px;line-height:1.6}.player-buttons{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.player-buttons .ghost-button{font-size:11px;border-color:#404c60;color:#d3eab2}.danger-button{background:#3a222b;border:1px solid #844657;color:#ffafb4;border-radius:10px;padding:12px;font-size:11px;font-weight:800}.comment-side{border:1px solid #303543;border-radius:13px;background:#10141f;padding:14px;display:flex;flex-direction:column;min-height:360px;max-height:560px;direction:rtl}.comment-side h3{font-size:16px;margin:3px 0 15px}.comment-side h3 span+span{color:var(--lime)}.comment-side form{display:flex;gap:7px;margin-bottom:12px}.comment-side input{font-size:11px;padding:11px}.comment-submit{background:var(--lime);border:0;color:#172011;border-radius:8px;padding:0 12px}.comment-list{overflow-y:auto;display:flex;flex-direction:column;gap:14px;flex:1}.comment{display:flex;align-items:start;gap:10px;padding-bottom:13px;border-bottom:1px solid #242938}.comment-body{flex:1;min-width:0}.comment-header{display:flex;align-items:center;justify-content:space-between;gap:8px}.comment-header strong{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.comment-header small{font-size:9px;color:#7f889e}.comment p{margin:5px 0 0;color:#bac1ce;font-size:11px;line-height:1.6;overflow-wrap:anywhere}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,15px);background:#caff55;color:#0c1808;border-radius:12px;padding:13px 19px;font-size:12px;font-weight:800;z-index:40;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 12px 34px #0007}.toast.show{opacity:1;transform:translate(-50%,0)}
+[dir="rtl"] .feed-head,[dir="rtl"] .stat,[dir="rtl"] .video-card-body,[dir="rtl"] .auth-card,[dir="rtl"] .upload-modal,[dir="rtl"] .comment-side{direction:rtl;text-align:right}[dir="rtl"] .modal-top{direction:rtl}[dir="rtl"] .field input,[dir="rtl"] .field textarea{direction:rtl}[dir="rtl"] .hero-info{direction:rtl;text-align:right;padding-left:0;padding-right:40px}[dir="rtl"] .hero-buttons{justify-content:start}[dir="rtl"] .eyebrow,[dir="rtl"] .hero-tag{justify-content:start}[dir="rtl"] .search-wrap input{direction:rtl}[dir="rtl"] .comment{direction:rtl}
+@media(max-width:1250px){.sidebar{width:210px}.layout{grid-template-columns:210px minmax(0,1fr)}.main-inner{padding:24px}.topbar{padding:0 24px}.hero-info{padding:35px 0 28px 32px}.hero-art{min-width:220px;transform:scale(.87);transform-origin:center}.stat{padding:13px;gap:10px}.stat strong{font-size:19px}.stat-icon{height:42px;width:42px}.video-grid{gap:14px}.thumb{height:145px}}@media(max-width:990px){.layout{grid-template-columns:1fr}.sidebar{display:none}.main-inner{padding:18px}.topbar{height:72px;padding:0 18px}.mobile-brand{display:block;font-size:18px;font-weight:900;letter-spacing:-1px;white-space:nowrap}.search-wrap{max-width:310px}.mobile-nav{display:flex;gap:8px;padding:11px 18px 0}.mobile-nav button{color:#9399ad;background:#161a28;border:1px solid #303546;border-radius:8px;padding:9px 14px;font-size:11px;font-weight:800}.mobile-nav button.active{color:#dfff89;border-color:#718d42}.hero-art{flex:.8}.hero h1{font-size:40px}.stats-strip{gap:8px}.stat{padding:13px}.stat-icon{height:35px;width:35px;font-size:18px}.stat strong{font-size:17px}}@media(max-width:700px){.topbar{height:65px;gap:10px;padding:0 12px}.mobile-brand{font-size:16px}.search-wrap{flex:1;max-width:none;height:37px}.search-wrap kbd{display:none}.top-actions{gap:5px}.top-actions select{width:56px;max-width:56px;padding:4px;font-size:11px}.top-add{width:38px;height:38px;padding:0;justify-content:center}.top-add span:last-child{display:none}.avatar{display:none}.main-inner{padding:14px}.hero{min-height:300px}.hero-info{padding:28px 22px!important;flex:1;direction:rtl}.hero-art{position:absolute;right:-130px;top:0;bottom:0;opacity:.29;width:350px;pointer-events:none}.hero h1{font-size:clamp(32px,9vw,48px);max-width:360px}.hero p{max-width:275px}.hero-buttons{flex-wrap:wrap}.hero-tag{font-size:8px;margin-top:18px}.eyebrow{font-size:8px}.stats-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{min-height:75px}.stat strong{font-size:18px}.feed-head{display:block;margin-top:30px}.feed-head h2{font-size:25px}.section-actions{margin-top:20px}.chip{padding:9px 12px;font-size:11px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.thumb{height:125px}.video-card-body{padding:10px}.video-card h3{font-size:12px}.video-meta{font-size:9px}.author-line{font-size:10px}.author-avatar{width:23px;height:23px;font-size:10px}.viewer-layout{grid-template-columns:1fr}.viewer-modal{padding:14px}.comment-side{min-height:240px;max-height:360px}.footer{margin-top:32px}.overlay{padding:9px}.modal{max-height:calc(100vh - 18px)}.auth-card{padding:24px}}@media(max-width:420px){.video-grid{grid-template-columns:1fr}.thumb{height:195px}.stats-strip .stat-label{font-size:8px;letter-spacing:.6px}.stat strong{font-size:16px}.topbar .search-wrap input{font-size:10px}.mobile-nav button{padding:8px 12px}.hero-buttons{gap:6px}.ghost-button,.primary-button{font-size:11px;padding:10px 12px}}
+
+/* Account switch for primary creator and additional contributors. */
+.auth-switch{display:block;margin:14px auto 0;background:transparent;border:0;color:#ba9eff;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.auth-switch:hover{color:#e7d8ff}
+
+/* v4: visible, non-blocking guidance when served from GitHub Pages or file://. */
+.preview-banner { display:flex; align-items:center; gap:11px; padding:13px 16px; margin-bottom:17px; border:1px solid #4b5167; border-radius:12px; color:#e3e4f5; background:linear-gradient(100deg,#23233c,#1a2735); font-size:12px; line-height:1.7; }
+.preview-icon { display:grid; place-items:center; width:29px; height:29px; flex-shrink:0; background:#31375a; color:#d5ff83; border-radius:9px; font-size:20px; }
+@media (max-width:700px) { .preview-banner {font-size:11px; padding:11px 12px;} }
+/* On narrow screens, artwork must never obscure the hero copy. */
+@media (max-width:700px) {
+  .hero-art { opacity:.18; }
+  .hero-art .pixel-title, .hero-art .floating-pill { display:none; }
+}
+
+/* v6: owner invitation required only when creating the privileged account. */
+.owner-code-box{display:flex;flex-direction:column}.owner-code-box small{font-size:11px;color:#8e98ac;line-height:1.6;margin:-9px 0 14px}
+
+</style>
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="layout" id="layout">
+    <aside class="sidebar">
+      <a href="#" class="brand" aria-label="PakesY Home"><span class="brand-symbol">P<span class="brand-spark">✦</span></span><span class="brand-word">Pakes<span>Y</span></span></a>
+      <div class="sidebar-sub">CREATOR UNIVERSE <span class="online-light"></span></div>
+      <div class="side-title" data-i18n="menu">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-tab="for-you"><span class="nav-icon">⌂</span><span data-i18n="discover">Discover</span></button>
+        <button class="nav-link" data-tab="trending"><span class="nav-icon">⚡</span><span data-i18n="trending">Trending</span></button>
+        <button class="nav-link" data-tab="mine"><span class="nav-icon">▤</span><span data-i18n="myVideos">My videos</span></button>
+      </nav>
+            <div class="side-spacer"></div>
+      <div class="creator-card"><div class="creator-card-glow"></div><span class="crown">♛</span><div class="creator-card-title" data-i18n="creatorMode">Creator Mode</div><p data-i18n="creatorNote">Your uploads always lead the feed.</p><button class="creator-card-action" id="sidebarUpload"><span data-i18n="uploadNow">Upload now</span> ↗</button></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span data-i18n="privateStudio">PRIVATE STUDIO</span><small>v1.0</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand">P<span>✦</span> PakesY</div>
+        <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search BedWars videos..." data-i18n-placeholder="search" aria-label="Search videos"/><kbd>⌘ K</kbd></div>
+        <div class="top-actions"><select id="language" title="Language" aria-label="Language"><option value="fa">🇮🇷 فارسی</option><option value="ur">🇵🇰 اردو</option><option value="en">🇬🇧 English</option><option value="ar">🇸🇦 العربية</option><option value="hi">🇮🇳 हिन्दी</option><option value="tr">🇹🇷 Türkçe</option><option value="es">🇪🇸 Español</option><option value="zh">🇨🇳 中文</option></select><button class="top-add" id="topUpload"><span>＋</span><span data-i18n="create">Create</span></button><button class="avatar" id="userMenu" title="Account">P</button></div>
+      </header>
+      <div class="mobile-nav"><button data-tab="for-you" class="active" data-i18n="discover">Discover</button><button data-tab="trending" data-i18n="trending">Trending</button><button data-tab="mine" data-i18n="myVideos">My videos</button></div>
+      <div class="main-inner">
+        <div class="preview-banner hidden" id="previewBanner" role="status"><span class="preview-icon">ⓘ</span><span data-i18n="previewInfo">GitHub Pages is only a preview. Deploy to Railway for online accounts and video uploads.</span></div>
+        <section class="hero">
+          <div class="hero-noise"></div>
+          <div class="hero-info"><div class="eyebrow"><span class="eyebrow-flare">✦</span><span data-i18n="heroLabel">THE NEXT LEVEL IS HERE</span></div><h1><span data-i18n="heroTitleA">Your game.</span><br/><em data-i18n="heroTitleB">Your universe.</em></h1><p data-i18n="heroDesc">Upload epic BedWars moments, remix clips and build your own video world.</p><div class="hero-buttons"><button id="heroUpload" class="primary-button"><span>＋</span><span data-i18n="uploadVideo">Upload video</span></button><button id="heroExplore" class="ghost-button"><span data-i18n="explore">Explore videos</span><span>↗</span></button></div><div class="hero-tag"><span class="pulse-dot"></span><span data-i18n="heroFeature">AUTO EDIT • BEDWARS • 8 LANGUAGES</span></div></div>
+          <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-1"></div><div class="hero-orbit orbit-2"></div><div class="pixel-field"><div class="cube cube-1"></div><div class="cube cube-2"></div><div class="cube cube-3"></div><div class="cube cube-4"></div><div class="cube cube-5"></div><div class="pixel-title">BED<span>WARS</span></div><div class="sword">⚔</div></div><div class="floating-pill pill-1">⚡ <span>CLUTCH!</span></div><div class="floating-pill pill-2">✦ <span>TOP CREATOR</span></div></div>
+        </section>
+        <div class="stats-strip"><div class="stat"><span class="stat-icon purple">▶</span><div><div class="stat-label" data-i18n="totalVideos">YOUR UPLOADS</div><strong id="statVideos">0</strong></div></div><div class="stat"><span class="stat-icon coral">♥</span><div><div class="stat-label" data-i18n="totalLikes">TOTAL LIKES</div><strong id="statLikes">0</strong></div></div><div class="stat"><span class="stat-icon blue">▤</span><div><div class="stat-label" data-i18n="totalComments">COMMENTS</div><strong id="statComments">0</strong></div></div><div class="stat"><span class="stat-icon lime">◈</span><div><div class="stat-label" data-i18n="earnings">EARNINGS</div><strong id="statEarnings">₨ 0</strong></div></div></div>
+        <section class="feed-head" id="videoFeed"><div><div class="section-eyebrow" data-i18n="curatedForYou">CURATED FOR YOU</div><h2><span data-i18n="feedTitle">The video arena</span><span class="headline-dot">.</span></h2><p data-i18n="feedSubtitle">Fresh moments from your PakesY universe.</p></div><div class="section-actions"><button class="chip active" data-chip="for-you" data-i18n="forYou">For You</button><button class="chip" data-chip="trending" data-i18n="trending">Trending</button><button class="chip" data-chip="mine" data-i18n="myVideos">My Videos</button></div></section>
+        <div class="video-grid" id="videos"></div>
+        <footer class="footer"><span>PakesY <span class="footer-star">✦</span> 2026</span><span>Studio reactions and earnings are simulated for entertainment.</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay" id="authOverlay"><div class="auth-card"><div class="auth-spark">✦</div><div class="auth-logo">Pakes<span>Y</span></div><p class="auth-small" data-i18n="authPrivate">YOUR PRIVATE CREATOR UNIVERSE</p><h2 id="authHeading" data-i18n="welcome">Welcome back</h2><p id="authDescription" data-i18n="signInNote">Sign in to enter your studio.</p><form id="authForm"><label data-i18n="email">Email address</label><input type="email" id="authEmail" required autocomplete="email" placeholder="name@example.com"/><label data-i18n="password">Password</label><input type="password" id="authPassword" required autocomplete="current-password" minlength="8" placeholder="••••••••"/><div class="owner-code-box hidden" id="ownerCodeBox"><label id="ownerCodeLabel" for="ownerCode">Owner setup code</label><input type="password" id="ownerCode" autocomplete="off" placeholder="••••••••"/><small>Only for the featured creator account · set the code privately on Railway</small></div><button class="primary-button full" type="submit" id="authSubmit" data-i18n="signIn">Sign in →</button><div id="authError" class="form-error" role="alert"></div></form><button type="button" class="auth-switch" id="authSwitch">Create an account</button><p class="auth-bottom"><span class="status-dot"></span><span data-i18n="localOnly">Only your account can access this studio.</span></p></div></div>
+  <div class="overlay hidden" id="uploadOverlay"><div class="modal upload-modal"><div class="modal-top"><div><div class="section-eyebrow" data-i18n="createSomething">CREATE SOMETHING EPIC</div><h2 data-i18n="newUpload">New video</h2></div><button class="icon-close" data-close="uploadOverlay">✕</button></div><form id="uploadForm"><label class="dropzone" id="dropzone"><input type="file" id="videoFile" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,video/*" required hidden/><span class="upload-illustration">↑</span><strong data-i18n="dropVideo">Choose your BedWars video</strong><small id="selectedFile" data-i18n="fileHint">MP4, MOV, WEBM, MKV • Max 750 MB</small></label><div class="field"><label for="videoTitle" data-i18n="videoTitle">Video title</label><input id="videoTitle" required maxlength="140" placeholder="The best BedWars clutch ever!"/></div><div class="field"><label for="videoDescription" data-i18n="description">Description</label><textarea id="videoDescription" rows="3" maxlength="1000" placeholder="Tell your story..."></textarea></div><div class="toggle-area"><div class="toggle-icon">✧</div><div class="toggle-copy"><strong data-i18n="autoEdit">Auto Edit</strong><small data-i18n="autoEditDesc">Automatically cuts long videos, improves color and sharpness, then publishes.</small></div><label class="switch"><input id="autoEdit" type="checkbox" checked/><span></span></label></div><button type="submit" id="publish" class="primary-button full"><span data-i18n="editAndPublish">Edit & publish automatically</span> <span>↗</span></button><div id="uploadStatus" class="upload-status"></div></form></div></div>
+  <div class="overlay hidden" id="viewerOverlay"><div class="modal viewer-modal"><div class="modal-top"><div><div class="section-eyebrow">NOW PLAYING</div><h2 id="viewerTitle">BedWars</h2></div><button class="icon-close" data-close="viewerOverlay">✕</button></div><div class="viewer-layout"><div class="player-side"><video id="videoPlayer" controls playsinline preload="metadata"></video><div class="player-meta"><span id="playerAuthor"></span><span id="playerStats"></span></div><p id="playerDesc"></p><div class="player-buttons"><button class="ghost-button" id="simulateBtn">⚡ <span data-i18n="boost48">Complete 48h engagement</span></button><button class="danger-button hidden" id="deleteBtn" data-i18n="deleteVideo">Delete video</button></div></div><div class="comment-side"><h3><span data-i18n="comments">Comments</span> <span id="commentCount"></span></h3><form id="commentForm"><input id="commentInput" maxlength="500" required data-i18n-placeholder="writeComment" placeholder="Write a comment..."/><button class="comment-submit" type="submit">➤</button></form><div id="commentList" class="comment-list"></div></div></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script id="pakesy-bundled-script">
+/* PakesY private studio — all network calls are to this app's own API. */
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const state = { lang: (()=>{try{return localStorage.getItem('pakesy_lang')||'fa'}catch{return 'fa'}})(), tab: 'for-you', videos: [], current: null, registered: false, featured: false, authMode:'login', busy: false, preview: false };
+  const english = {
+    featured:'FEATURED', scoreHint:'PakesY points', menu:'MENU', discover:'Discover', trending:'Trending', myVideos:'My videos', community:'COMMUNITY', profiles:'Profiles',
+    creatorMode:'Creator Mode', creatorNote:'Your uploads always lead the feed.', uploadNow:'Upload now', privateStudio:'PRIVATE STUDIO',
+    create:'Create', heroLabel:'THE NEXT LEVEL IS HERE', heroTitleA:'Your game.', heroTitleB:'Your universe.', heroDesc:'Upload epic BedWars moments, remix clips and build your own video world.',
+    uploadVideo:'Upload video', explore:'Explore videos', heroFeature:'AUTO EDIT • BEDWARS • 8 LANGUAGES', totalVideos:'YOUR UPLOADS', totalLikes:'LIKES',
+    totalComments:'COMMENTS', earnings:'EARNINGS', curatedForYou:'CURATED FOR YOU', feedTitle:'The video arena', feedSubtitle:'Fresh moments from your PakesY universe.',
+    forYou:'For You', footer:'MAKE MOMENTS LEGENDARY.', authPrivate:'YOUR PRIVATE CREATOR UNIVERSE', welcome:'Welcome back', signInNote:'Sign in to enter your studio.',
+    email:'Email address', password:'Password', signIn:'Sign in →', localOnly:'Your studio is secured with your email and password.',
+    createSomething:'CREATE SOMETHING EPIC', newUpload:'New video', dropVideo:'Choose your BedWars video', fileHint:'MP4, MOV, WEBM, MKV • Max 750 MB',
+    videoTitle:'Video title', description:'Description', autoEdit:'Auto Edit', autoEditDesc:'Cut highlights, enhance color and sharpness, then publish.',
+    editAndPublish:'Edit & publish automatically', boost48:'Complete 48h engagement', deleteVideo:'Delete video', comments:'Comments',
+    search:'Search BedWars videos...',writeComment:'Write a comment...', register:'Create account →', switchSignUp:'New here? Create an account', switchSignIn:'Have an account? Sign in', registerTitle:'Create your studio', registerNote:'Create your account with email and a password of at least 8 characters. The featured creator also needs a one-time setup code.',ownerCode:'Owner setup code',
+    noVideos:'Your arena is ready',noVideosNote:'Upload your first BedWars video to start receiving likes and comments.',
+    creator:'PakesY Creator', publish:'Publish video', noEdit:'Publish without editing', uploading:'Uploading and processing video…', completed:'Video published.',
+    confirmDelete:'Delete this video and its remixes?', deleted:'Video deleted.', signOut:'Sign out?', signOutLabel:'Sign out', simDone:'48-hour activity applied.',
+    uploadError:'Could not publish the video.', authError:'Authentication failed.', commentError:'Could not add comment.', sizeError:'File exceeds 750 MB.',
+    commentsEmpty:'No comments yet', posted:'Comment added', yours:'YOUR VIDEO', remix:'REMIX', likes:'likes', views:'views', video:'video',
+    localInfo:'This app requires its Python server; GitHub Pages alone cannot run it.', previewInfo:'This GitHub Pages page is only a preview. Deploy the project on Railway to enable online accounts, video uploads and Auto Edit.'
+  };
+  const fa = {
+    featured:'ویژه', scoreHint:'امتیاز PakesY', menu:'منو',discover:'کاوش',trending:'ترندها',myVideos:'ویدیوهای من',community:'انجمن',profiles:'پروفایل‌ها',creatorMode:'حالت سازنده',
+    creatorNote:'ویدیوهای تو همیشه اول نمایش داده می‌شوند.',uploadNow:'همین حالا آپلود کن',privateStudio:'استودیوی خصوصی',create:'ساخت',
+    heroLabel:'مرحله بعد همین‌جاست',heroTitleA:'بازی تو.',heroTitleB:'دنیای تو.',heroDesc:'بهترین لحظات بدوارز را آپلود کن و دنیای اختصاصی ویدیو بساز.',
+    uploadVideo:'آپلود ویدیو',explore:'دیدن ویدیوها',heroFeature:'ادیت خودکار • بدوارز • ۸ زبان',totalVideos:'ویدیوهای آپلودشده',totalLikes:'لایک‌ها',
+    totalComments:'کامنت‌ها',earnings:'درآمد',curatedForYou:'ویژه تو',feedTitle:'دنیای ویدیوها',feedSubtitle:'بهترین لحظات در دنیای PakesY تو.',
+    forYou:'برای تو',footer:'لحظه‌های افسانه‌ای بساز.',authPrivate:'دنیای خصوصی گیمینگ تو',welcome:'خوش برگشتی',signInNote:'برای ورود به استودیو وارد حسابت شو.',
+    email:'ایمیل',password:'رمز عبور',signIn:'ورود ←',localOnly:'ورود با ایمیل و رمز عبور.',
+    createSomething:'یک چیز خفن بساز',newUpload:'ویدیوی جدید',dropVideo:'ویدیوی بدوارزت را انتخاب کن',fileHint:'MP4، MOV، WEBM، MKV • حداکثر ۷۵۰ مگابایت',
+    videoTitle:'عنوان ویدیو',description:'توضیحات',autoEdit:'ادیت خودکار',autoEditDesc:'ساخت کلیپ کوتاه، تنظیم رنگ و شارپنس و سپس انتشار خودکار.',
+    editAndPublish:'ادیت و انتشار خودکار',boost48:'نمایش فعالیت ۴۸ ساعت و ساخت ریمیکس‌ها',deleteVideo:'حذف ویدیو',comments:'کامنت‌ها',
+    search:'جست‌وجوی ویدیوهای بدوارز...',writeComment:'کامنت بنویس...',register:'ساخت حساب ←', switchSignUp:'حساب نداری؟ ثبت‌نام کن', switchSignIn:'حساب داری؟ وارد شو',registerTitle:'استودیوت رو بساز',
+    registerNote:'با ایمیل و رمز ۸ کاراکتری ثبت‌نام کن؛ حساب ویژه به کد راه‌اندازی هم نیاز دارد.',ownerCode:'کد راه‌اندازی حساب ویژه',noVideos:'دنیای تو آماده‌ست',
+    noVideosNote:'اولین ویدیوی بدوارزت را آپلود کن تا لایک‌ها و کامنت‌ها شروع شوند.',
+    creator:'سازنده PakesY',publish:'انتشار ویدیو',noEdit:'انتشار بدون ادیت',uploading:'در حال آپلود و پردازش ویدیو…',completed:'ویدیو منتشر شد.',
+    confirmDelete:'ویدیو و ریمیکس‌های آن حذف شوند؟',deleted:'ویدیو حذف شد.',signOut:'از حساب خارج می‌شوی؟',signOutLabel:'خروج',
+    simDone:'فعالیت ۴۸ ساعته اعمال شد.',uploadError:'انتشار ویدیو ناموفق بود.',authError:'ورود یا ثبت‌نام ناموفق بود.',
+    commentError:'ارسال کامنت ناموفق بود.',sizeError:'حجم فایل بیشتر از ۷۵۰ مگابایت است.',commentsEmpty:'هنوز کامنتی نیست',posted:'کامنت اضافه شد',
+    yours:'ویدیوی تو',remix:'ریمیکس',likes:'لایک',views:'بازدید',video:'ویدیو', localInfo:'برای استفاده از این برنامه سرور پایتون لازم است؛ GitHub Pages به تنهایی کافی نیست.', previewInfo:'این صفحه روی GitHub Pages فقط پیش‌نمایش است. برای ثبت‌نام و آپلود اینترنتی، پروژه را روی Railway منتشر کن.'
+  };
+  const ur = {
+    featured:'نمایاں', scoreHint:'PakesY اسکور', menu:'مینو',discover:'دریافت',trending:'ٹرینڈنگ',myVideos:'میری ویڈیوز',community:'کمیونٹی',profiles:'پروفائلز',creatorMode:'کریئیٹر موڈ',
+    creatorNote:'آپ کی ویڈیوز ہمیشہ سب سے اوپر ہوں گی۔',uploadNow:'ابھی اپلوڈ کریں',privateStudio:'پرائیویٹ اسٹوڈیو',create:'بنائیں',
+    heroLabel:'نیا لیول یہاں ہے',heroTitleA:'آپ کا کھیل۔',heroTitleB:'آپ کی دنیا۔',heroDesc:'BedWars کے شاندار لمحات اپلوڈ کریں اور اپنی ویڈیو دنیا بنائیں۔',
+    uploadVideo:'ویڈیو اپلوڈ کریں',explore:'ویڈیوز دیکھیں',heroFeature:'آٹو ایڈٹ • بیڈوارز • ۸ زبانیں',totalVideos:'میری اپلوڈز',totalLikes:'لائکس',
+    totalComments:'کمنٹس',earnings:'آمدنی',curatedForYou:'آپ کے لیے منتخب',feedTitle:'ویڈیو ایرینا',feedSubtitle:'PakesY میں تازہ لمحات۔',
+    forYou:'آپ کے لیے',footer:'لمحات کو یادگار بنائیں۔',authPrivate:'آپ کی پرائیویٹ ویڈیو دنیا',welcome:'خوش آمدید',signInNote:'اپنے اسٹوڈیو میں لاگ اِن کریں۔',
+    email:'ای میل',password:'پاس ورڈ',signIn:'لاگ اِن ←',localOnly:'صرف اپنے ای میل اور پاس ورڈ سے لاگ اِن کریں۔',
+    createSomething:'کچھ زبردست بنائیں',newUpload:'نئی ویڈیو',dropVideo:'BedWars ویڈیو منتخب کریں',fileHint:'MP4، MOV، WEBM، MKV • ۷۵۰ MB تک',
+    videoTitle:'ویڈیو کا عنوان',description:'تفصیل',autoEdit:'آٹو ایڈٹ',autoEditDesc:'خودکار مختصر کلپس، رنگ بہتر، پھر پبلش۔',
+    editAndPublish:'ایڈٹ اور پبلش کریں',boost48:'۴۸ گھنٹے کی سرگرمی مکمل کریں',deleteVideo:'ویڈیو حذف کریں',comments:'کمنٹس',
+    search:'BedWars ویڈیوز تلاش کریں...',writeComment:'کمنٹ لکھیں...',register:'اکاؤنٹ بنائیں ←', switchSignUp:'اکاؤنٹ نہیں؟ بنائیں', switchSignIn:'اکاؤنٹ ہے؟ لاگ اِن کریں',registerTitle:'اپنا اسٹوڈیو بنائیں',registerNote:'ای میل اور کم از کم ۸ حرف کے پاس ورڈ سے اکاؤنٹ بنائیں۔',ownerCode:'مالک کا سیٹ اپ کوڈ',
+    noVideos:'آپ کا ایرینا تیار ہے',noVideosNote:'اپنی پہلی BedWars ویڈیو اپلوڈ کریں۔',creator:'PakesY کریئیٹر',publish:'ویڈیو پبلش کریں',noEdit:'بغیر ایڈٹ پبلش',
+    uploading:'ویڈیو اپلوڈ اور پراسیس ہو رہی ہے…',completed:'ویڈیو پبلش ہو گئی۔',confirmDelete:'ویڈیو اور اس کے ریمکس حذف کریں؟',deleted:'ویڈیو حذف ہو گئی۔',
+    signOut:'لاگ آؤٹ کریں؟',signOutLabel:'لاگ آؤٹ',simDone:'۴۸ گھنٹوں کی سرگرمی مکمل ہوئی۔',uploadError:'اپلوڈ ناکام۔',authError:'لاگ اِن ناکام۔',
+    commentError:'کمنٹ ناکام۔',sizeError:'فائل ۷۵۰ MB سے بڑی ہے۔',commentsEmpty:'ابھی کوئی کمنٹ نہیں',posted:'کمنٹ شامل ہوگیا',yours:'آپ کی ویڈیو',remix:'ریمکس',likes:'لائکس',views:'ویوز',video:'ویڈیو',previewInfo:'GitHub Pages صرف پیش منظر دکھاتا ہے۔ آن لائن اکاؤنٹس اور ویڈیو اپ لوڈ کے لیے Railway پر ڈیپلائے کریں۔'
+  };
+  const more = {
+    ar:{discover:'استكشف',trending:'الرائج',myVideos:'فيديوهاتي',community:'المجتمع',uploadNow:'ارفع الآن',create:'إنشاء',heroTitleA:'لعبتك.',heroTitleB:'عالمك.',uploadVideo:'رفع فيديو',totalVideos:'فيديوهاتي',totalLikes:'الإعجابات',totalComments:'التعليقات',earnings:'الأرباح',feedTitle:'عالم الفيديو',signIn:'تسجيل الدخول',email:'البريد الإلكتروني',password:'كلمة المرور',newUpload:'فيديو جديد',autoEdit:'تعديل تلقائي',comments:'التعليقات',forYou:'لك',writeComment:'اكتب تعليقًا...',register:'أنشئ حسابًا',welcome:'مرحبًا بك'},
+    hi:{discover:'खोजें',trending:'ट्रेंडिंग',myVideos:'मेरे वीडियो',community:'समुदाय',uploadNow:'अभी अपलोड करें',create:'बनाएं',heroTitleA:'आपका गेम।',heroTitleB:'आपकी दुनिया।',uploadVideo:'वीडियो अपलोड करें',totalVideos:'मेरे अपलोड',totalLikes:'लाइक्स',totalComments:'कमेंट्स',earnings:'कमाई',feedTitle:'वीडियो की दुनिया',signIn:'लॉग इन करें',email:'ईमेल',password:'पासवर्ड',newUpload:'नया वीडियो',autoEdit:'ऑटो एडिट',comments:'कमेंट्स',forYou:'आपके लिए',writeComment:'कमेंट लिखें...',register:'अकाउंट बनाएं',welcome:'वापस स्वागत है'},
+    tr:{discover:'Keşfet',trending:'Trendler',myVideos:'Videolarım',community:'Topluluk',uploadNow:'Şimdi yükle',create:'Oluştur',heroTitleA:'Senin oyunun.',heroTitleB:'Senin evrenin.',uploadVideo:'Video yükle',totalVideos:'YÜKLEMELERİM',totalLikes:'BEĞENİLER',totalComments:'YORUMLAR',earnings:'KAZANÇ',feedTitle:'Video arenası',signIn:'Giriş yap',email:'E-posta',password:'Şifre',newUpload:'Yeni video',autoEdit:'Otomatik Düzenle',comments:'Yorumlar',forYou:'Sana özel',writeComment:'Yorum yaz...',register:'Hesap oluştur',welcome:'Tekrar hoş geldin'},
+    es:{discover:'Explorar',trending:'Tendencias',myVideos:'Mis videos',community:'Comunidad',uploadNow:'Subir ahora',create:'Crear',heroTitleA:'Tu juego.',heroTitleB:'Tu universo.',uploadVideo:'Subir video',totalVideos:'MIS VIDEOS',totalLikes:'ME GUSTA',totalComments:'COMENTARIOS',earnings:'INGRESOS',feedTitle:'Arena de videos',signIn:'Iniciar sesión',email:'Correo',password:'Contraseña',newUpload:'Nuevo video',autoEdit:'Edición automática',comments:'Comentarios',forYou:'Para ti',writeComment:'Escribe un comentario...',register:'Crear cuenta',welcome:'Bienvenido de nuevo'},
+    zh:{discover:'发现',trending:'热门',myVideos:'我的视频',community:'社区',uploadNow:'立即上传',create:'创建',heroTitleA:'你的游戏。',heroTitleB:'你的世界。',uploadVideo:'上传视频',totalVideos:'我的视频',totalLikes:'点赞',totalComments:'评论',earnings:'收益',feedTitle:'视频世界',signIn:'登录',email:'电子邮箱',password:'密码',newUpload:'新视频',autoEdit:'自动剪辑',comments:'评论',forYou:'为你推荐',writeComment:'写评论...',register:'创建账号',welcome:'欢迎回来'}
+  };
+  const tr = (key) => ({...english,...(state.lang==='fa'?fa:state.lang==='ur'?ur:more[state.lang]||{})})[key] || english[key] || key;
+  const esc = (s) => String(s??'').replace(/[&<>"']/g, (c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt = (v) => new Intl.NumberFormat(state.lang==='fa'?'fa-IR':state.lang==='ur'?'ur-PK':'en-US',{maximumFractionDigits:0}).format(Number(v)||0);
+  const api = async (url, opts={}) => {
+    const res = await fetch(url, {credentials:'same-origin', ...opts});
+    const payload = await res.json().catch(()=>({}));
+    if(!res.ok) throw new Error(typeof payload.detail==='string'?payload.detail:`HTTP ${res.status}`);
+    return payload;
+  };
+  const json = (method,body) => ({method,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  let toastTimer;
+  const toast=(message)=>{const e=$('toast');e.textContent=message;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3500)};
+  const applyLanguage=()=>{
+    if(!['fa','ur','en','ar','hi','tr','es','zh'].includes(state.lang))state.lang='en';
+    document.documentElement.lang=state.lang;
+    document.documentElement.dir=['fa','ur','ar'].includes(state.lang)?'rtl':'ltr';
+    $('language').value=state.lang;
+    $('previewBanner').classList.toggle('hidden', !state.preview);
+    document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=tr(el.dataset.i18n));
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.placeholder=tr(el.dataset.i18nPlaceholder));
+    $('authHeading').textContent=state.authMode==='login'?tr('welcome'):tr('registerTitle');
+    $('authDescription').textContent=state.authMode==='login'?tr('signInNote'):tr('registerNote');
+    $('authSubmit').textContent=state.authMode==='login'?tr('signIn'):tr('register');
+    $('authSwitch').textContent=state.authMode==='login'?tr('switchSignUp'):tr('switchSignIn');
+    $('ownerCodeLabel').textContent=tr('ownerCode');
+    syncOwnerSetupField();
+    document.querySelector('.creator-card').classList.toggle('hidden',!state.featured);
+    $('publish').querySelector('[data-i18n]').textContent=$('autoEdit').checked?tr('editAndPublish'):tr('noEdit');
+    $('statEarnings').title=tr('scoreHint');
+    if(state.videos.length)renderFeed();
+    else renderEmpty();
+  };
+  const syncOwnerSetupField=()=>{const needed=state.authMode==='register' && $('authEmail').value.trim().toLowerCase()==='pa9783531@gmail.com'; $('ownerCodeBox').classList.toggle('hidden',!needed);$('ownerCode').required=needed;if(!needed)$('ownerCode').value='';};
+  const authDisplay=(show)=>{$('authOverlay').classList.toggle('hidden',!show);$('layout').setAttribute('aria-hidden',show?'true':'false')};
+  async function bootstrap(){
+    applyLanguage();
+    try{
+      const s=await api('/api/status');state.registered=s.registered;state.authMode=s.registered?'login':'register';state.featured=!!s.featured_account;
+      syncOwnerSetupField();
+      if(s.authenticated){authDisplay(false);await loadFeed();}
+      else {authDisplay(true);applyLanguage();}
+    }catch(e){
+      // GitHub Pages and file:// serve HTML/CSS/JS only, not the Python API.
+      // Show an honest, styled preview instead of an unusable sign-in overlay.
+      if(location.protocol==='file:' || !['localhost','127.0.0.1'].includes(location.hostname)){
+        state.preview=true; state.featured=false; authDisplay(false); applyLanguage();
+      } else {
+        $('authError').textContent=tr('localInfo')+' '+e.message;authDisplay(true);
+      }
+    }
+  }
+  async function loadFeed(){
+    if(state.preview) { renderEmpty(); return; }
+    try{
+      const data=await api('/api/feed?tab='+encodeURIComponent(state.tab)+'&q='+encodeURIComponent($('search').value.trim()));
+      state.videos=data.videos||[];renderFeed();
+      $('statVideos').textContent=fmt(data.stats.videos);
+      $('statLikes').textContent=fmt(data.stats.likes);
+      $('statComments').textContent=fmt(data.stats.comments);
+      $('statEarnings').textContent='₨ '+fmt(data.stats.demo_earnings);
+    }catch(e){if(/401/.test(e.message))authDisplay(true);else toast(e.message)}
+  }
+  const avatar=(p)=>`<span class="author-avatar" style="background:${esc(p?.color||'#c9fc50')};color:#172127">${esc(p?.initial||'P')}</span>`;
+  function renderEmpty(){
+    $('videos').innerHTML=`<div class="empty-state"><div class="empty-icon">⚔</div><h3>${esc(tr('noVideos'))}</h3><p>${esc(tr('noVideosNote'))}</p><button class="primary-button" id="emptyUpload">＋ ${esc(tr('uploadVideo'))}</button></div>`;
+    $('emptyUpload')?.addEventListener('click',openUpload);
+  }
+  function renderFeed(){
+    if(!state.videos.length) return renderEmpty();
+    $('videos').innerHTML=state.videos.map((v)=>`<article class="video-card" data-video="${esc(v.id)}" tabindex="0" role="button" aria-label="${esc(v.title)}">
+      <div class="thumb" style="background:linear-gradient(140deg,#201a3b,#1e3043)">
+        <img src="${esc(v.poster_url||'./assets/cover.svg')}" loading="lazy" alt="" style="width:100%;height:100%;object-fit:cover"/>
+        <span class="thumb-label">${v.is_featured?'♛ '+esc(tr('featured')):v.is_owner?esc(tr('yours')):'✧ '+esc(tr('remix'))}</span>
+        <span class="thumb-duration">${Math.floor((v.duration||0)/60)}:${String(Math.floor((v.duration||0)%60)).padStart(2,'0')}</span>
+      </div><div class="video-card-body"><div class="author-line">${avatar(v.author)}<span class="author-name">${esc(v.author?.name||tr('creator'))}</span>${v.is_featured?'<span class="creator-check">✦</span>':''}</div>
+      <h3 title="${esc(v.title)}">${esc(v.title)}</h3><div class="video-meta"><span>${new Date(v.created_at*1000).toLocaleDateString(state.lang==='fa'?'fa-IR':'en-US')}</span><span class="meta-stats">♥ ${fmt(v.likes)} &nbsp; ◉ ${fmt(v.views)} &nbsp; ◌ ${fmt(v.comments)}</span></div></div></article>`).join('');
+    $('videos').querySelectorAll('[data-video]').forEach(card=>{
+      card.addEventListener('click',()=>openViewer(card.dataset.video));
+      card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openViewer(card.dataset.video)}});
+    });
+  }
+  const openUpload=()=>{if(state.preview){toast(tr('previewInfo'));return;} $('uploadOverlay').classList.remove('hidden');$('uploadStatus').textContent='';};
+  const closeOverlay=(id)=>{ $(id).classList.add('hidden');if(id==='viewerOverlay'){$('videoPlayer').pause();$('videoPlayer').removeAttribute('src');$('videoPlayer').load();state.current=null;}};
+  const setTab=async(tab)=>{
+    state.tab=tab;
+    document.querySelectorAll('[data-tab],[data-chip]').forEach(b=>b.classList.toggle('active',(b.dataset.tab||b.dataset.chip)===tab));
+    if(!state.preview) await loadFeed();
+    $('videoFeed').scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  async function openViewer(id){
+    const v=state.videos.find(x=>x.id===id);if(!v)return;
+    state.current=v;
+    $('viewerTitle').textContent=v.title;
+    $('videoPlayer').src=v.url;
+    $('playerAuthor').textContent=v.author.name+(v.is_owner?' ✦':'');
+    $('playerStats').textContent=`♥ ${fmt(v.likes)} · ◉ ${fmt(v.views)}`;
+    $('playerDesc').textContent=v.description||'';
+    $('deleteBtn').classList.toggle('hidden',!v.is_owner);
+    $('simulateBtn').classList.toggle('hidden',!v.is_featured||!state.featured);
+    $('viewerOverlay').classList.remove('hidden');
+    await loadComments(id);
+  }
+  async function loadComments(id){
+    try{
+      const data=await api(`/api/videos/${encodeURIComponent(id)}/comments?limit=100`);
+      $('commentCount').textContent=fmt(state.current?.comments||data.comments.length);
+      $('commentList').innerHTML=data.comments.length?data.comments.map(c=>`<div class="comment">${avatar(c.author)}<div class="comment-body"><div class="comment-header"><strong>${esc(c.author.name)}</strong><small>${new Date(c.created_at*1000).toLocaleDateString(state.lang==='fa'?'fa-IR':'en-US')}</small></div><p>${esc(c.body)}</p></div></div>`).join(''):`<p style="text-align:center;color:#98a1b0">${esc(tr('commentsEmpty'))}</p>`;
+    }catch(e){toast(e.message)}
+  }
+  async function publish(e){
+    e.preventDefault();if(state.busy)return;
+    const file=$('videoFile').files[0];if(!file){toast(tr('dropVideo'));return;}
+    if(file.size>750*1024*1024){toast(tr('sizeError'));return;}
+    state.busy=true;
+    $('publish').disabled=true;$('uploadStatus').textContent=tr('uploading');
+    const form=new FormData();form.append('file',file);form.append('title',$('videoTitle').value.trim());form.append('description',$('videoDescription').value.trim());form.append('auto_edit',String($('autoEdit').checked));
+    try{
+      const r=await api('/api/upload',{method:'POST',body:form});
+      // Engagement starts with the server-side upload; no new posts on sign-in.
+      $('uploadForm').reset();$('selectedFile').textContent=tr('fileHint');$('uploadStatus').textContent='';closeOverlay('uploadOverlay');
+      toast(tr('completed'));state.tab='for-you';await setTab('for-you');
+    }catch(err){$('uploadStatus').textContent=`${tr('uploadError')} ${err.message}`;}
+    finally{state.busy=false;$('publish').disabled=false;}
+  }
+  document.querySelectorAll('#sidebarUpload,#topUpload,#heroUpload').forEach(x=>x.addEventListener('click',openUpload));
+  $('heroExplore').addEventListener('click',()=>{$('videoFeed').scrollIntoView({behavior:'smooth'})});
+  document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>closeOverlay(x.dataset.close)));
+  document.querySelectorAll('.overlay').forEach(x=>x.addEventListener('click',(e)=>{if(e.target===x&&x.id!=='authOverlay')closeOverlay(x.id)}));
+  document.querySelectorAll('[data-tab],[data-chip]').forEach(x=>x.addEventListener('click',()=>setTab(x.dataset.tab||x.dataset.chip)));
+  $('language').addEventListener('change',e=>{state.lang=e.target.value;try{localStorage.setItem('pakesy_lang',state.lang)}catch{} applyLanguage();});
+  $('autoEdit').addEventListener('change',()=>{$('publish').querySelector('[data-i18n]').textContent=$('autoEdit').checked?tr('editAndPublish'):tr('noEdit')});
+  $('videoFile').addEventListener('change',e=>{$('selectedFile').textContent=e.target.files[0]?.name||tr('fileHint')});
+  $('dropzone').addEventListener('dragover',e=>{e.preventDefault();$('dropzone').classList.add('dragging')});
+  $('dropzone').addEventListener('dragleave',()=>$('dropzone').classList.remove('dragging'));
+  $('dropzone').addEventListener('drop',e=>{e.preventDefault();$('dropzone').classList.remove('dragging');if(e.dataTransfer.files[0]){const dt=new DataTransfer();dt.items.add(e.dataTransfer.files[0]);$('videoFile').files=dt.files;$('selectedFile').textContent=dt.files[0].name;}});
+  $('authForm').addEventListener('submit',async e=>{
+    e.preventDefault();$('authError').textContent='';$('authSubmit').disabled=true;
+    try{await api(state.authMode==='login'?'/api/login':'/api/register',json('POST',{email:$('authEmail').value,password:$('authPassword').value,setup_code:state.authMode==='register' ? $('ownerCode').value : ''}));const me=await api('/api/status');state.registered=true;state.featured=!!me.featured_account;state.authMode='login';authDisplay(false);$('authPassword').value='';applyLanguage();await loadFeed();}
+    catch(err){$('authError').textContent=`${tr('authError')} ${err.message}`;}
+    finally{$('authSubmit').disabled=false;}
+  });
+  $('authSwitch').addEventListener('click',()=>{state.authMode=state.authMode==='login'?'register':'login';$('authError').textContent='';applyLanguage()});
+  $('authEmail').addEventListener('input',syncOwnerSetupField);
+  $('userMenu').addEventListener('click',async()=>{if(state.preview){toast(tr('previewInfo'));return;} if(!confirm(tr('signOut')))return;try{await api('/api/logout',{method:'POST'});authDisplay(true);state.featured=false;state.authMode='login';$('authPassword').value='';applyLanguage()}catch(err){toast(err.message)}});
+  $('uploadForm').addEventListener('submit',publish);
+  $('commentForm').addEventListener('submit',async(e)=>{
+    e.preventDefault();if(!state.current)return;
+    const id=state.current.id;
+    try{await api(`/api/videos/${id}/comment`,json('POST',{body:$('commentInput').value.trim()}));$('commentInput').value='';await loadFeed();state.current=state.videos.find(v=>v.id===id)||state.current;await loadComments(id);toast(tr('posted'));}
+    catch(err){toast(`${tr('commentError')} ${err.message}`)}
+  });
+  $('simulateBtn').addEventListener('click',async()=>{
+    if(!state.current)return;const id=state.current.id;
+    $('simulateBtn').disabled=true;
+    try{await api(`/api/videos/${id}/simulate`,json('POST',{count:500,bot_videos:2}));await loadFeed();state.current=state.videos.find(v=>v.id===id)||state.current;await loadComments(id);toast(tr('simDone'));}
+    catch(err){toast(err.message)}finally{$('simulateBtn').disabled=false;}
+  });
+  $('deleteBtn').addEventListener('click',async()=>{
+    if(!state.current||!confirm(tr('confirmDelete')))return;
+    try{await api(`/api/videos/${state.current.id}`,{method:'DELETE'});closeOverlay('viewerOverlay');await loadFeed();toast(tr('deleted'))}catch(err){toast(err.message)}
+  });
+  let searchTimer;$('search').addEventListener('input',()=>{if(state.preview)return;clearTimeout(searchTimer);searchTimer=setTimeout(loadFeed,280)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){for(const id of ['uploadOverlay','viewerOverlay'])if(!$(id).classList.contains('hidden'))closeOverlay(id)}if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('search').focus();}});
+  bootstrap();
+  setInterval(async()=>{
+    if(state.preview||!$('authOverlay').classList.contains('hidden')||state.busy)return;
+    await loadFeed();
+    if(!$('viewerOverlay').classList.contains('hidden') && state.current){
+      const id=state.current.id;
+      state.current=state.videos.find(v=>v.id===id)||state.current;
+      $('playerStats').textContent=`♥ ${fmt(state.current.likes)} · ◉ ${fmt(state.current.views)}`;
+      await loadComments(id);
+    }
+  },15000);
+})();
+
+</script>
+</body>
+</html>
